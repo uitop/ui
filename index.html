@@ -1,11 +1,129 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>포트폴리오</title>
+    <title>UIUIUIUI</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link rel="stylesheet" href="/assets/css/rzslider.min.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/slick-theme.css">
+    <link rel="stylesheet" href="/assets/css/default.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <script src="//www.youtube.com/iframe_api"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+    <script src="/assets/js/rzslider.min.js"></script>
+    <script src="/assets/js/Chart.min.js"></script>
+    <script src="/assets/js/angular-chart.min.js"></script>
+    <script src="/assets/js/slick.min.js"></script>
+    <script src="/assets/js/angular-slick.min.js"></script>
+    <script src="/assets/js/ko-kr.js"></script>
+    <script src="/assets/js/default.js"></script>
+    <script src="/assets/js/index.js"></script>
 </head>
-<body>
-    hi
+<body ng-app="myPortfolio" ng-controller="myPof">
+    <div class="video-background">
+        <div class="video-foreground">
+            <iframe id="backVdo" src="https://www.youtube.com/embed/hYvNB0ucJM8?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=hYvNB0ucJM8&enablejsapi=1&mute=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <header>
+        <div class="headWrap" ng-show="isCon > 0">
+            <ul class="menuList">
+                <li class="menuItems wd40"><a ng-click="isCon = 0" ng-show="isCon < 0">Intro</a></li>
+                <li class="menuItems wd20"><a ng-class="{onItem : isFcs == 1}" href="#skWrap" ng-click="goSec(1)">Skill</a></li>
+                <li class="menuItems wd20"><a ng-class="{onItem : isFcs == 2}" href="#pfWrap" ng-click="goSec(2)">Portfolio</a></li>
+                <li class="menuItems wd20"><a ng-class="{onItem : isFcs == 3}" href="#abWrap" ng-click="goSec(3)">About</a></li>
+            </ul>            
+        </div>
+    </header>
+    <div class="opDiv">
+        <div class="textDiv wClr" ng-show="isCon == 0">
+            <h2 class="thsIsP">이것은 포트폴리오</h2>
+            <h2 class="thsIsP">This is a portfolio</h2>
+            <h2 class="thsIsP">これはポートフォリオ</h2>
+            <div class="btnArea isMo">
+                <a ng-click="isCon = 1" title="Scroll 형식 레이아웃">Scroll Ver</a>
+                <a ng-click="isCon = 2" title="layer tab 형식 레이아웃">Layer Ver</a>
+            </div>
+        </div>
+        <div class="btnArea isPc linkDiv" ng-show="isCon == 0">
+            <a ng-click="isCon = 1" title="Scroll 형식 레이아웃">Scroll Ver</a>
+            <a ng-click="isCon = 2" title="layer tab 형식 레이아웃">Layer Ver</a>
+        </div>
+    </div>
+    <footer ng-controller="footerArea">
+        <div class="footLeftArea">
+            <a href="https://www.youtube.com/watch?v=hYvNB0ucJM8" target="_blank" class="youClr" title="유튜브에서 보기"><i class="fab fa-youtube youClr"></i></a>
+            <i class="fas fa-volume-up cursp" ng-click="muteCtr(true)" ng-hide="isMute" title="소리켜기"></i>
+            <i class="fas fa-volume-off cursp" ng-click="muteCtr(false)" ng-show="isMute" title="소리끄기"></i>
+            <rzslider rz-slider-model="slider.value" ng-hide="isMute" id="volSlider" rz-slider-options="slider.options"></rzslider>
+        </div>
+         <a href="https://github.com/uitop/ui" target="_blank" class="wClr" title="소스보기"><i class="fab fa-github"></i></a>
+        <div>
+        </div>
+    </footer>
+    <section class="subArea" ng-show="isCon > 0">
+        <div class="subWrap" id="skWrap" ng-mouseover="isFcs = 1">
+            <h1 class="secTitle mgb0">Skill</h1>
+            <div ng-controller="radarCht" class="radarWrap">
+                <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
+            </div><div class="radarWrap isSkTxt">
+                <h2>UI  
+                    <sub>서비스는 새로워도 화면은 익숙하게, 설계를 잘 따라가며 페이지에 목적을 생각하며 구현합니다. PC시안만으로 모바일 까지 구현합니다.</sub>
+                </h2>
+                <h2>SCRIPT  
+                    <sub>문서 잘 읽고, 데모 잘 보다보니 어려운게 없습니다.</sub>
+                </h2>
+                <h2>PHP  
+                    <sub>PHP 기반 프레임워크를 자주 다뤘습니다. 게시판 서비스 정도는 구현가능합니다. 서버사이드 스크립트에 대한 이해도가 있습니다.</sub>
+                </h2>
+                <h2>GOOGLING
+                    <sub>모르는건 있어도 못하는건 없을만큼 잘 찾습니다.</sub>
+                </h2>
+                <h2>TOOL
+                    <sub>오피스나, 포토샵, 동영상 편집프로그램등 코딩 외 도구들도 필요한만큼은 사용하며 PC를 잘다룹니다.</sub>
+                </h2>
+                <h2>ALGORITHM
+                    <sub>단계를 더 간단하게 더 효과적으로 구동되게 고민하는것을 좋아합니다. 새로운 서비스를 보면 어떻게 동작하는지 보고 넘어 갑니다.</sub>
+                </h2>
+            </div>
+        </div>
+        <div class="subWrap" id="pfWrap" ng-mouseover="isFcs = 2">
+            <h1 class="secTitle">Portfolio</h1>
+            <div class="secWrap" ng-controller="SlickController">
+                <slick class="secSlide" settings="slickConfig2">
+                    <div class="slideItem" ng-repeat="dt in links">
+                        <a href="{{dt.a}}" target="_blank" title="{{dt.t}}"><img src="/assets/img/spo0{{$index}}.png"></a>
+                        <div class="sItemTxt yr{{dt.y}}">
+                            <h3>{{dt.t}}<sub>({{dt.y}})</sub></h3>
+                            <h4>{{dt.i}}</h4>
+                        </div>
+                    </div>
+                </slick>
+            </div>
+        </div>
+        <div class="subWrap" id="abWrap" ng-mouseover="isFcs = 3">
+            <h1 class="secTitle">About Me</h1>
+            <div>
+                <h3>
+                    1985년생, 5년차, 민방위 2년차<br/>
+                    좋은회사 = ["거리", "분위기", "가능성"];
+                </h3>
+                <h2>재미있게 일 하기</h2>
+                <q>지치지 않아야 한다.</q><br/>
+                <q>작은 관심이 분위기를 바꾼다.</q><br/>
+                <q>미소는 셀프다.</q><br/>
+                <q>일이건 놀이건 잘하면 다 재미있다.</q>
+            </div>
+            <div class="mailArea">
+                <h2>무종교, 무담배, 무커피</h2>
+                <h4>E-mail : <a href="mailto:graytv1985@gmail.com">3무 직원 <i class="fas fa-envelope"></i></a></h4>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
