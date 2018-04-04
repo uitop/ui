@@ -5,24 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UIUIUIUI</title>
+    <meta name="title" content="포트폴리오">
+    <meta name="subject" content="포폴포폴">
+    <meta name="description" content="좋은회사 가고싶은 포트폴리오">
+    <meta name="keywords" content="퍼블리셔,프론트엔드">
+    <meta name="writer" content="Top">
+    <meta name="author" content="Top">
+    <meta name="robots" content="ALL">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="포트폴리오">
+    <meta property="og:description" content="좋은회사 가고싶은 포트폴리오">
+    <meta property="og:image" content="https://uitop.github.io/ui/assets/img/chrome.jpg">
+    <meta property="og:url" content="https://uitop.github.io/ui/">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-    <link rel="stylesheet" href="/assets/css/rzslider.min.css">
-    <link rel="stylesheet" href="/assets/css/slick.css">
-    <link rel="stylesheet" href="/assets/css/slick-theme.css">
-    <link rel="stylesheet" href="/assets/css/default.css">
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/rzslider.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <script src="//www.youtube.com/iframe_api"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
-    <script src="/assets/js/rzslider.min.js"></script>
-    <script src="/assets/js/Chart.min.js"></script>
-    <script src="/assets/js/angular-chart.min.js"></script>
-    <script src="/assets/js/slick.min.js"></script>
-    <script src="/assets/js/angular-slick.min.js"></script>
-    <script src="/assets/js/ko-kr.js"></script>
-    <script src="/assets/js/default.js"></script>
-    <script src="/assets/js/index.js"></script>
+    <script src="assets/js/rzslider.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/angular-chart.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/angular-slick.min.js"></script>
+    <script src="assets/js/ko-kr.js"></script>
+    <script src="assets/js/default.js"></script>
+    <script src="assets/js/index.js"></script>
 </head>
 <body ng-app="myPortfolio" ng-controller="myPof">
     <div class="video-background">
@@ -97,7 +109,7 @@
             <div class="secWrap" ng-controller="SlickController">
                 <slick class="secSlide" settings="slickConfig2">
                     <div class="slideItem" ng-repeat="dt in links">
-                        <a href="{{dt.a}}" target="_blank" title="{{dt.t}}"><img src="/assets/img/spo0{{$index}}.png"></a>
+                        <a href="{{dt.a}}" target="_blank" title="{{dt.t}}"><img src="assets/img/spo0{{$index}}.png"></a>
                         <div class="sItemTxt yr{{dt.y}}">
                             <h3>{{dt.t}}<sub>({{dt.y}})</sub></h3>
                             <h4>{{dt.i}}</h4>
