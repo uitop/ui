@@ -75,10 +75,10 @@ app.controller('SlickController', function ($scope) {
         {'a':'https://www.thehigh1.com/','t':'더하이원펀딩','y':2017,'i':'크라우드펀딩 사이트'},
         {'a':'https://www.daily-funding.com/','t':'데일리펀딩','y':2017,'i':'크라우드펀딩 사이트'},
         {'a':'https://www.finstreet.co.kr/','t':'핀스트리트','y':2017,'i':'크라우드펀딩 사이트'},
-        {'a':'/assets/img/po07.png','t':'어학원 사이트','y':2017,'i':'이미지 페이지로 이동합니다.'},
+        {'a':'assets/img/po07.png','t':'어학원 사이트','y':2017,'i':'이미지 페이지로 이동합니다.'},
         {'a':'http://www.winnersplan.co.kr/','t':'위너스플랜','y':2017,'i':'그누보드 기반 회사소개 사이트'},
         {'a':'http://www.bullsinvest.co.kr/','t':'불스인베스트','y':2017,'i':'주식정보 제공사이트'},
-        {'a':'/assets/img/po010.png','t':'가상화페 거래소 지갑화면','y':2018,'i':'이미지 페이지로 이동합니다.'}
+        {'a':'assets/img/po010.png','t':'가상화페 거래소 지갑화면','y':2018,'i':'이미지 페이지로 이동합니다.'}
     ]
 });
 app.controller('footerArea', function($scope){
