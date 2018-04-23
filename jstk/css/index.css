@@ -1,0 +1,84 @@
+/*혹시 보신다면 파일 하나로 보는게 편할것 같아 하나로 묶었습니다. 큰요소별로 주석달려 있습니다. */
+html,body,div,span,h5,h4,textarea,input{padding:0;margin:0;line-height:1;box-sizing: border-box}
+body{background:#f9f9f9;overflow:hidden}
+body::-webkit-scrollbar{width: 7px;height:7px}
+body::-webkit-scrollbar-track{background-color: lightcyan;}
+body::-webkit-scrollbar-thumb{background-color:dodgerblue;}
+/*보드*/
+#mainWrap{height:100vh;width:100%;min-width:800px;min-height:600px;margin: 0 auto;border:1px solid #ddd;border-radius: 9px;background:#fff;position:relative;}
+
+/*메모 없는 경우*/
+#newArea{width:99%;height:98vh;border:dashed 3px cyan;margin:1vh auto 0;text-align: center;font-size:6vh;color:coral;padding:45vh 0;border-radius:20px;cursor:pointer;}
+#newArea:hover{border-color:coral;transition:0.7s}
+
+/*메모*/
+.jStickers{position:absolute;width:250px;height:200px;min-width:250px;min-height:30px;border-radius: 4px;border:1px solid #d7d7d7}
+.jStickers.wasOn{box-shadow: 0px 0px 3px 1px #0f0f0f;}
+.jStickers.wasOn.onjStk{box-shadow: 0px 0px 3px 1px #ff0000;z-index:100 !important;}
+.jStickers.jSalign{position:static;float: left;margin:10px;}
+.jStkBar{height:15px;width:100%;position:relative;padding:1px 40px 0px 6px}
+.jStkXY{height:100%;width:100%;cursor:move;font-size:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.timr{font-size:11px;}
+.timr:after{content:'초 #'}
+.jStkBtns{position:absolute;right:0;top:1px;height:14px;-webkit-user-select: none;}
+.jStkBtn{font-size:11px;vertical-align:top; width: 13px;height: 13px;border-radius:10px;display:inline-block;text-align: center;cursor:pointer;color:#333}
+.xBtn{background:#3f3f3f;color:#fff;}
+.tBtn:after{content:'▲';}
+.jStkText{width:100%;height:calc(100% - 16px);resize:none;border:0;background: none;border-top: 1px solid #9f9f9f;padding:2px 3px;font-size:inherit;color:inherit}
+.jStkText:focus, .colorPik:focus{box-shadow: 0;outline: none !important;} /*입력요소 포커스시 처리*/
+.jStkText::-webkit-scrollbar{width: 7px;}
+.jStkText::-webkit-scrollbar-track{background-color: lightcyan;}
+.jStkText::-webkit-scrollbar-thumb{background-color: darkcyan;}
+.sizeArea{position: absolute;bottom:0;right:0;width:0;height:0;border-top: 5px solid transparent;border-left: 5px solid transparent;border-right: 5px inset #000;border-bottom: 5px ridge #000;cursor: nw-resize;opacity:0.4;border-radius:3px;}
+
+/*우클릭메뉴*/
+#rMenu{position:absolute;background:#f1f1f1;border:1px outset #e1e1e1;padding:0.25rem;border-radius:5px;z-index: 300}
+.rItemGrp, .rItem,.rItemOtn{padding:0.25rem;position: relative;}
+.rItemGrp:not(:first-child){border-top:1px solid #777}
+.rItemOtn:hover{background-color:aquamarine}
+.rItemOtn:hover > input:focus + .colorPicker{display:block;}
+.rItemOtn select, .rItemOtn input{width:80px;position:relative;z-index: 1;border: 1px solid #777;height:19px}
+.rItemOtn input{cursor:pointer;font-size:0;vertical-align: top;}
+.rItem:hover{background-color:deepskyblue;cursor: pointer;}
+.removeDly{position: relative}
+.removeDly #setScd{width:50px}
+.removeDly span{position: absolute;left: 57px;top: 0;padding-top: 0.3rem;width:calc(100% - 59px);height: 100%;}
+.colorPicker{position:absolute;width:85px;right:0;z-index:100;top:0;display:none;}
+.colorPicker > div{width:100%;height:17px;border:1px solid #7f7f7f;text-align: center;font-size: 13px;cursor: pointer;}
+.colorPicker > div:hover{border-color:cyan}
+
+/*메모옵션*/
+[bClr='1']{background-color:#f3f53f}
+[bClr='2']{background-color:cornflowerblue}
+[bClr='3']{background-color:chartreuse}
+[bClr='4']{background-color:navy}
+[bClr='4'] .jStkBtn{color:antiquewhite}
+[bClr='4'] .sizeArea{border-right-color:antiquewhite;border-bottom-color:aliceblue;opacity:0.8}
+[bClr='5']{background-color:darkorange}
+[bClr='6']{background-color:#333}
+[bClr='7']{background-color:white}
+[fClr='1']{color:#f3f53f}
+[fClr='2']{color:cornflowerblue}
+[fClr='3']{color:chartreuse}
+[fClr='4']{color:navy}
+[fClr='5']{color:darkorange}
+[fClr='6']{color:#333}
+[fClr='7']{color:white}
+[fsz='1']{font-size:11px}
+[fsz='2']{font-size:12px}
+[fsz='3']{font-size:13px}
+[fsz='4']{font-size:14px}
+[fsz='5']{font-size:15px}
+[fsz='6']{font-size:16px}
+[spr='false']{min-height:17px;height:17px !important;}
+[spr='false'] .jStkXY{font-size:12px;}
+[spr='false'] .jStkText, div[spr='false'] .sizeArea{display:none;}
+[spr='false'] .tBtn:after{content:'▼';}
+
+/*스크롤처리*/
+@media screen and (max-width: 810px){
+    body{overflow-x:auto;}
+}
+@media screen and (max-height: 610px){
+    body{overflow-y:auto;}
+}

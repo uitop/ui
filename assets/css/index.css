@@ -58,7 +58,7 @@ footer{position:fixed;bottom:0;left:0;width:100%;background:#555;color:#aaa;text
 @media screen and (min-width: 800px) and (min-height: 860px){
     .isMo{display:none !important;}
 }
-@media screen and (max-width: 800px), screen and (max-height: 860px){
+@media screen and (max-width: 800px) and (max-height: 860px){
     .isPc{display:none !important;}
     .textDiv{margin-top:3rem;position:static;display:inline-block;}
 }
