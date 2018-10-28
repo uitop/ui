@@ -84,14 +84,14 @@
             <div ng-controller="radarCht" class="radarWrap">
                 <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
             </div><div class="radarWrap isSkTxt">
-                <h2>UI  
-                    <sub>서비스는 새로워도 화면은 익숙하게, 설계를 잘 따라가며 페이지에 목적을 생각하며 구현합니다. PC시안만으로 모바일 까지 구현합니다.</sub>
+                <h2>COMMUNICATION  
+                    <sub>기획의 목적을, 디자인 의도를 사용자에게 더 잘 전달 할 수 있도록 살피고 확인합니다.</sub>
                 </h2>
-                <h2>SCRIPT  
-                    <sub>문서 잘 읽고, 데모 잘 보다보니 어려운게 없습니다.</sub>
+                <h2>FRONTEND  
+                    <sub>react,angularJS 어떤 작업 환경이라도 접근성, 사용자의 편의성등 변함없는 가치를 염두하고 작업합니다.</sub>
                 </h2>
                 <h2>PHP  
-                    <sub>PHP 기반 프레임워크를 자주 다뤘습니다. 게시판 서비스 정도는 구현가능합니다. 서버사이드 스크립트에 대한 이해도가 있습니다.</sub>
+                    <sub>PHP게시판 서비스 구현 경험으로, backend에 대한 이해도가 있습니다. </sub>
                 </h2>
                 <h2>GOOGLING
                     <sub>모르는건 있어도 못하는건 없을만큼 잘 찾습니다.</sub>
@@ -108,8 +108,8 @@
             <h1 class="secTitle">Portfolio</h1>
             <div class="secWrap" ng-controller="SlickController">
                 <slick class="secSlide" settings="slickConfig2">
-                    <div class="slideItem" ng-repeat="dt in links">
-                        <a href="{{dt.a}}" target="_blank" title="{{dt.t}}"><img src="assets/img/spo0{{$index}}.png"></a>
+                    <div class="slideItem" ng-repeat="dt in links | orderBy : '-'">
+                        <a href="{{dt.a}}" target="_blank" title="{{dt.t}}"><img src="assets/img/spo{{$index}}.png"></a>
                         <div class="sItemTxt yr{{dt.y}}">
                             <h3>{{dt.t}}<sub>({{dt.y}})</sub></h3>
                             <h4>{{dt.i}}</h4>
@@ -132,8 +132,8 @@
                 <q>일이건 놀이건 잘하면 다 재미있다.</q>
             </div>
             <div class="mailArea">
-                <h2>무종교, 무담배, 무커피</h2>
-                <h4>E-mail : <a href="mailto:graytv1985@gmail.com">3무 직원 <i class="fas fa-envelope"></i></a></h4>
+                <h2>무교, 무담배, 무드셀라</h2>
+                <h4>E-mail : <a href="mailto:dev.grayt@gmail.com">3무 직원 <i class="fas fa-envelope"></i></a></h4>
             </div>
         </div>
     </section>

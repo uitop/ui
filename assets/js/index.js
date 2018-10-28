@@ -11,7 +11,7 @@ app.controller('myPof', function($scope){
     }
 });
 app.controller("radarCht", function ($scope) {
-    $scope.labels = ["Script","PHP","Googling","Tool","Algorithm","UI"];
+    $scope.labels = ["frontend","PHP","Googling","Tool","Algorithm","UI"];
     $scope.data = [ [95, 90, 100, 85,95,100] ];
     $scope.options = {
         elements:{
@@ -78,7 +78,8 @@ app.controller('SlickController', function ($scope) {
         {'a':'assets/img/po07.png','t':'어학원 사이트','y':2017,'i':'이미지 페이지로 이동합니다.'},
         {'a':'http://www.winnersplan.co.kr/','t':'위너스플랜','y':2017,'i':'그누보드 기반 회사소개 사이트'},
         {'a':'http://www.bullsinvest.co.kr/','t':'불스인베스트','y':2017,'i':'주식정보 제공사이트'},
-        {'a':'assets/img/po010.png','t':'가상화페 거래소 지갑화면','y':2018,'i':'이미지 페이지로 이동합니다.'}
+        {'a':'assets/img/po010.png','t':'가상화페 거래소 지갑화면','y':2018,'i':'이미지 페이지로 이동합니다.'},
+        {'a':'http://event.pping.kr','t':'가격비교 사이트 이벤트 리스트','y':2018,'i':'행복쇼핑 이벤트'}
     ]
 });
 app.controller('footerArea', function($scope){
