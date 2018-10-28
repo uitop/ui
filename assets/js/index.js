@@ -11,8 +11,8 @@ app.controller('myPof', function($scope){
     }
 });
 app.controller("radarCht", function ($scope) {
-    $scope.labels = ["frontend","PHP","Googling","Tool","Algorithm","UI"];
-    $scope.data = [ [95, 90, 100, 85,95,100] ];
+    $scope.labels = ["communication","frontend","PHP","Googling","Tool","Algorithm"];
+    $scope.data = [[100,95, 90, 100, 85,95]] ;
     $scope.options = {
         elements:{
             point:{
