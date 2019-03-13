@@ -53,6 +53,7 @@ footer{position:fixed;bottom:0;left:0;width:100%;background:#555;color:#aaa;text
 .mailArea h4{margin-top:0.5rem}
 .mailArea a{color:#fff}
 
+.video-foreground{background:url(/assets/img/chrome.jpg) no-repeat 50% 50%;background-size: cover}
 @media (min-aspect-ratio: 16/9) {
     .video-foreground { height: 330%; top: -115%; }
 }
@@ -71,14 +72,16 @@ footer{position:fixed;bottom:0;left:0;width:100%;background:#555;color:#aaa;text
     .isSkTxt{float:none;width:100%;}
 }
 @media screen and (max-width: 620px){
-    .subArea{position:absolute;top:48px;max-height:calc( 95% - 48px );left:0;width:100%;overflow-y:auto}
+    .subArea{position:absolute;top:48px;max-height:calc( 95% - 75px );left:0;width:100%;overflow-y:auto}
     .radarWrap{width:100%}
     .isSkTxt{display:none;}
     .textDiv{font-size:20px}
     .menuItems.wd40{width:17%;margin-right:8%;}
     .menuItems.wd20{width:25%;}
     .menuItems a{font-size:13px;padding:1rem 0.5rem}
-    .subWrap{padding:1rem}
+    .subWrap{padding:1rem;background-color:rgba(0,0,0,0.4);}
+    footer{font-size: 30px;}
+    #kakao-link-btn{width:30px;height:30px;}
 }
 @media screen and (max-width: 420px){
     .textDiv{font-size:15px}

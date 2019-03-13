@@ -15,7 +15,7 @@ function APIReady(){
     objectType: 'feed',
     content: {
         title: '프론트엔드 포트폴리오',
-        description: 'HTML,SCSS,REACT,javascript,VUE,PHP',
+        description: 'HTML,SCSS,REACT,javascript,VUE,PHP // 도메인이 없어서 개발자 사이트 등록을 못했습니다. 아래버튼으로 이동해 부탁드립니다.',
         imageUrl: 'https://uitop.github.io/ui/assets/img/chrome.jpg',
         link: {
         mobileWebUrl: 'https://uitop.github.io/ui/',
@@ -24,11 +24,11 @@ function APIReady(){
     },
     buttons: [
         {
-        title: '웹으로 보기',
-        link: {
-            mobileWebUrl: 'https://uitop.github.io/ui/',
-            webUrl: 'https://uitop.github.io/ui/'
-        }
+            title: '포트폴리오 보기',
+            link: {
+                mobileWebUrl: 'https://uitop.github.io/ui/',
+                webUrl: 'https://uitop.github.io/ui/'
+            }
         }
     ]
     });
