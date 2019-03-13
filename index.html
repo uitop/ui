@@ -17,6 +17,7 @@
     <meta property="og:description" content="좋은회사 가고싶은 포트폴리오">
     <meta property="og:image" content="https://uitop.github.io/ui/assets/img/chrome.jpg">
     <meta property="og:url" content="https://uitop.github.io/ui/">
+    <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
     <link rel="stylesheet" href="assets/css/rzslider.min.css">
     <link rel="stylesheet" href="assets/css/slick.css">
@@ -27,7 +28,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
-    <script src="assets/js/rzslider.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script src="assets/js/Chart.min.js"></script>
     <script src="assets/js/angular-chart.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
@@ -68,39 +69,34 @@
         </div>
     </div>
     <footer ng-controller="footerArea">
-        <div class="footLeftArea">
-            <a href="https://www.youtube.com/watch?v=hYvNB0ucJM8" target="_blank" class="youClr" title="유튜브에서 보기"><i class="fab fa-youtube youClr"></i></a>
-            <i class="fas fa-volume-up cursp" ng-click="muteCtr(true)" ng-hide="isMute" title="소리켜기"></i>
-            <i class="fas fa-volume-off cursp" ng-click="muteCtr(false)" ng-show="isMute" title="소리끄기"></i>
-            <rzslider rz-slider-model="slider.value" ng-hide="isMute" id="volSlider" rz-slider-options="slider.options"></rzslider>
-        </div>
-         <a href="https://github.com/uitop/ui" target="_blank" class="wClr" title="소스보기"><i class="fab fa-github"></i></a>
-        <div>
-        </div>
+        <button type="button" id="kakao-link-btn" class="cursp"><img src="/assets/img/kakao_btn_small.png" alt="카카오톡 공유하기"></button>
+        <a href="https://www.youtube.com/watch?v=hYvNB0ucJM8" target="_blank" class="youClr" title="유튜브에서 보기"><i class="fab fa-youtube youClr"></i></a>
+        <a href="https://github.com/uitop/ui" target="_blank" class="wClr" title="소스보기"><i class="fab fa-github"></i></a>
     </footer>
     <section class="subArea" ng-show="isCon > 0">
         <div class="subWrap" id="skWrap" ng-mouseover="isFcs = 1">
             <h1 class="secTitle mgb0">Skill</h1>
             <div ng-controller="radarCht" class="radarWrap">
                 <canvas id="radar" class="chart chart-radar" chart-data="data" chart-options="options" chart-labels="labels"></canvas>
-            </div><div class="radarWrap isSkTxt">
+            </div>
+            <div class="radarWrap isSkTxt">
                 <h2>COMMUNICATION  
-                    <sub>기획의 목적을, 디자인 의도를 사용자에게 더 잘 전달 할 수 있도록 살피고 확인합니다.</sub>
+                    <sub>원하는 길이 아니더라도 웃으면서 걷자, 결과를 잘 수용하는 것이 소통의 기본이라고 생각합니다.</sub>
                 </h2>
                 <h2>FRONTEND  
-                    <sub>react,angularJS 어떤 작업 환경이라도 접근성, 사용자의 편의성등 변함없는 가치를 염두하고 작업합니다.</sub>
+                    <sub>javascript로 타임머신을 만들자. react,angularJS,vue 환경을 가리지 않고 들이대겠습니다.</sub>
                 </h2>
-                <h2>PHP  
-                    <sub>PHP게시판 서비스 구현 경험으로, backend에 대한 이해도가 있습니다. </sub>
-                </h2>
-                <h2>GOOGLING
-                    <sub>모르는건 있어도 못하는건 없을만큼 잘 찾습니다.</sub>
+                <h2>UI/UX  
+                    <sub>아무리 프랑스 요리가 맛있다고 해도 한국인 입맛은 한식, 좋은 방향보다 사용자에게 맞는 방향을 생각합니다.</sub>
                 </h2>
                 <h2>TOOL
-                    <sub>오피스나, 포토샵, 동영상 편집프로그램등 코딩 외 도구들도 필요한만큼은 사용하며 PC를 잘다룹니다.</sub>
+                    <sub>vsCode, webstorm 개발환경 적응은 기본 포토샵, 오피스, 동영상 편집등 컴퓨터 활용능력이 좋습니다.</sub>
                 </h2>
-                <h2>ALGORITHM
-                    <sub>단계를 더 간단하게 더 효과적으로 구동되게 고민하는것을 좋아합니다. 새로운 서비스를 보면 어떻게 동작하는지 보고 넘어 갑니다.</sub>
+                <h2>SEARCH
+                    <sub>많이 안다고 장담할 순 없지만, 많이 알 수 있는 방법은 알고있다고 장담할 수 있습니다.</sub>
+                </h2>
+                <h2>HEALTH
+                    <sub>7층까진 계단으로! 디테일은 체력에서 나옵니다. 끝날때까지 꼼꼼하려면 지치지 않아야 합니다</sub>
                 </h2>
             </div>
         </div>
@@ -122,14 +118,27 @@
             <h1 class="secTitle">About Me</h1>
             <div>
                 <h3>
-                    1985년생, 5년차, 민방위 2년차<br/>
+                    1985년생, 5년차, 장기 잘 둠<br/>
                     좋은회사 = ["거리", "분위기", "가능성"];
                 </h3>
                 <h2>재미있게 일 하기</h2>
                 <q>지치지 않아야 한다.</q><br/>
                 <q>작은 관심이 분위기를 바꾼다.</q><br/>
                 <q>미소는 셀프다.</q><br/>
-                <q>일이건 놀이건 잘하면 다 재미있다.</q>
+                <q>일이건 놀이건 잘하면 다 재미있다.</q><br/>
+                <q>문서는 보는사람 기준으로.</q><br/>
+                <q>출근은 10분전.</q><br/>
+                <p>All for one, One for all</p>
+            </div>
+            <div class="tagBox">
+                <span>javascript</span>
+                <span>react</span>
+                <span>angularJS</span>
+                <span>jquery</span>
+                <span>HTML</span>
+                <span>SASS</span>
+                <span>PHP</span>
+                <span>UX/UI</span>
             </div>
             <div class="mailArea">
                 <h2>무교, 무담배, 무드셀라</h2>

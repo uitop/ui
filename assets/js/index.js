@@ -1,4 +1,4 @@
-var app = angular.module('myPortfolio', ['ngRoute','rzModule','chart.js','slickCarousel']);
+var app = angular.module('myPortfolio', ['ngRoute','chart.js','slickCarousel']);
 app.controller('myPof', function($scope){
     $scope.isCon = 1;
     $scope.isFcs = 1;
@@ -7,12 +7,11 @@ app.controller('myPof', function($scope){
         if(nn == 2) nn = $('#skWrap').height();
         if(nn == 3) nn = $('#skWrap').height() + $('#pfWrap').height();
         $('section').animate({scrollTop:nn}, '500');
-        console.log(nn);
     }
 });
 app.controller("radarCht", function ($scope) {
-    $scope.labels = ["communication","frontend","PHP","Googling","Tool","Algorithm"];
-    $scope.data = [[100,95, 90, 100, 85,95]] ;
+    $scope.labels = ["Communication","Frontend","UX/UI","Tool","Search","Health"];
+    $scope.data = [[100,95, 90, 90, 95,100]] ;
     $scope.options = {
         elements:{
             point:{
@@ -25,7 +24,7 @@ app.controller("radarCht", function ($scope) {
                 suggestedMin: 30,
                 suggestedMax: 100,
                 fontColor:'#000',
-                fontSize:13   
+                fontSize:15   
             },
             angleLines:{
                 display:true,
@@ -35,7 +34,7 @@ app.controller("radarCht", function ($scope) {
                 color:['#888','#444','#444','#444','#8f8f8f','#eee','#9ab4c3']
             },
             pointLabels:{
-                fontSize:15,
+                fontSize:18,
                 fontColor:'#eee'
             }
         }
@@ -48,6 +47,7 @@ app.controller('SlickController', function ($scope) {
         autoplaySpeed: 3800,
         slidesToShow: 3,
         slidesToScroll: 3,
+        dots: true,
         responsive:[
             {
                 breakpoint:800,
@@ -62,7 +62,8 @@ app.controller('SlickController', function ($scope) {
                 settings:{
                     arrows:false,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: false,
                 }
             }
         ]
@@ -83,19 +84,5 @@ app.controller('SlickController', function ($scope) {
     ]
 });
 app.controller('footerArea', function($scope){
-    $scope.isMute = true;
-    $scope.slider = {
-        value: 10,
-        options: {
-            id:'volSlider',
-            onEnd: function(id) {
-                ytpObj.setVolume($scope.slider.value * 10);
-            }
-        }
-    };
-    $scope.muteCtr = function (bool) {
-        $scope.isMute = bool;
-        if(bool) ytpObj.mute();
-        else ytpObj.unMute();
-    };
+    APIReady()
 });
