@@ -1,0 +1,22 @@
+div{font-size:15px} a{cursor: pointer;}
+.dspI{display:inline;} .dspb{display:block;} .dspIb{display:inline-block;}
+.secWrap{max-width:1200px;width:98%;margin:0 auto;position:relative;background:#fff}
+.secTtl{margin:0;text-align: center;padding:1rem 0}
+.skillSec{}
+.skillBtnArea{position:absolute;width:200px;;background:#e4e4e4;z-index: 10;padding:0 0.5rem;box-sizing: border-box}
+.cate{padding-bottom:1rem}
+.cateName{margin:0}
+.skillBtn{display:block;margin:1rem;padding:0 0.5rem 0.25rem;border-left:1px solid #bfbfbf; border-bottom:1px solid #bfbfbf;}
+.skillViewArea{padding-left:200px;position:relative;font-size:0;}
+.viewArea{display:inline-block;width:60%;position:relative;vertical-align: middle;padding:1.5rem;box-sizing: border-box}
+.infoArea{display:inline-block;width:40%;position:relative;vertical-align: middle;}
+.infoItem{margin:1rem 0}
+.itemTtl{font-size:2rem}
+
+.slideSec{background:#e4e4e4;}
+.slideSec .secWrap{padding:1rem 0;background:#e4e4e4}
+.slideItem img{max-width:100%}
+
+.qnaList{padding:0;margin:0}
+.qnaItem{list-style: none;}
+.qnaTtl{margin:0}
