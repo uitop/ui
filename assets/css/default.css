@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 div,h1,h2,h3,h4,h5,li,p,span,a { font-family: 'Spoqa Han Sans', 'Sans-serif';font-weight:300}
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
