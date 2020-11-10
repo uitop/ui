@@ -9,7 +9,7 @@ function APIReady(){
     //     }
     // });
 
-    Kakao.init('5c812e8e06cf3b0114b3aad910e691b4');
+    Kakao.init('24349f424ecf65ab4b1575d146f61f1f');
     Kakao.Link.createDefaultButton({
     container: '#kakao-link-btn',
     objectType: 'feed',
