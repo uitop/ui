@@ -128,7 +128,6 @@ $(document).ready(function(){
     ]});
     
   enter_text(0);
-  APIReady();
 });
 var txt = ['안','녕','하','세','요','.','<br/>','"','pol','"','을',' ','눌','러','주','세','요.','^_^'];
 function enter_text(n){
