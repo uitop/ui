@@ -8,9 +8,9 @@
 	<meta name="title" content="포트폴리오">
 	<meta name="subject" content="포폴포폴">
 	<meta name="description" content="좋은회사 가고싶은 포트폴리오">
-	<meta name="keywords" content="퍼블리셔,프론트엔드">
-	<meta name="writer" content="commonJS">
-	<meta name="author" content="commonJS">
+	<meta name="keywords" content="UI개발자,프론트엔드">
+	<meta name="writer" content="Top">
+	<meta name="author" content="Top">
 	<meta name="robots" content="ALL">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="포트폴리오">
@@ -18,65 +18,94 @@
 	<meta property="og:image" content="https://uitop.github.io/ui/assets/img/chrome.jpg">
 	<meta property="og:url" content="https://uitop.github.io/ui/">
 	<link rel="shortcut icon" href="./favicon.ico">
-	<link rel="stylesheet" href="assets/icon/css/all.min.css">
-	<link rel="stylesheet" href="assets/css/default.css">
-	<link rel="stylesheet" href="assets/css/slick.css">
-	<link rel="stylesheet" href="assets/css/slick-theme.css">
-	<link rel="stylesheet" href="assets/css/index.min.css">
+	<link rel="stylesheet" href="./assets/icon/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/default.css">
+	<link rel="stylesheet" href="./assets/css/slick.css">
+	<link rel="stylesheet" href="./assets/css/index.min.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/Chart.min.js"></script>
-	<script src="assets/js/slick.min.js"></script>
+	<script src="./assets/js/default.js"></script>
+	<script src="./assets/js/main.js"></script>
+	<script src="./assets/js/Chart.min.js"></script>
+	<script src="./assets/js/slick.min.js"></script>
 </head>
 <body>
 	<div class="intro">
 		<button class="go_btn">
-			<i class="fab fa-dev"></i> pol
+			<i class="fab fa-dev"></i> Enter
 		</button>
-		<div class="bottom_text">
-			<span class="cl"></span>
-		</div>
+		<div class="bottom_text"></div>
 	</div>
 	<div class="wrap">
 		<section class="subArea">
 			<div class="subWrap" id="skWrap">
-				<h1 class="secTitle mgb0">Skill</h1>
+				<h1 class="secTitle mgb0">Status</h1>
 				<div class="radarWrap">
 					<canvas id="radar" class="chart chart-radar"></canvas>
 				</div>
 				<div class="radarWrap isSkTxt">
-					<h2>체력  
-						<sub>해 좋은날은 등산, 선선할땐 자전거, 마라톤10K 코스 최고기록 51분 출근할 때 생기 그대로 퇴근합니다.</sub>
-					</h2>
-					<h2>지구력
-						<sub>추가요청, 3차 추가요청, final 추가요청, 진짜 마지막 추가 요청 끝날 때까지 거침없이 작업합니다.</sub>
-					</h2>
-					<h2>실력 
-						<sub>언젠가 javascript로 타임머신을 만들겠다는 각오로 코딩하고, 어떤 요청이던 답을 찾아냅니다.</sub>
-					</h2>
-					<h2>이해력 
-						<sub>대화를 할 땐 서로의 의견을 교환하는 것을 넘어 상대의 마음을 파악할 때 좋은 결과가 있다고 생각합니다.</sub>
-					</h2>
-					<h2>매력 
-						<sub>웃음이 많고 밥도 잘먹고 싫다는 소리도 잘 안해서, 어디서든 적없이 두루두루 잘지냅니다.</sub>
-					</h2>
-					<h2>적응력
-						<sub>아르바이트 9년, Web 6년 다양한 경험과 긍정적 사고로 환경을 가리지 않고 편견없이 적응합니다.</sub>
-					</h2>
+					<div class="radar__text">
+						<h3>
+							STR <sup>근력</sup>
+						</h3>
+						<h6>체력관리 덕에 다리는 튼튼해서 사무실 이동/이사에 최적화됨</h6>
+					</div>
+					<div class="radar__text">
+						<h3>
+							DEX <sup>재주</sup>
+						</h3>
+						<h6>오랜 알바와 자취로 잡재주가 많음</h6>
+					</div>
+					<div class="radar__text">
+						<h3>
+							CON <sup>체력</sup>
+						</h3>
+						<h6>10K런닝, 등산, 자전거 라이딩 실외레저를 통해 지치지 않는 체력을 유지</h6>
+					</div>
+					<div class="radar__text">
+						<h3>
+							INT <sup>지능</sup>
+						</h3>
+						<h6>단기기억력과 이해력이 좋아 학습능력도 좋고 두번설명 안해도됨</h6>
+					</div>
+					<div class="radar__text">
+						<h3>
+							WIS <sup>지혜</sup>
+						</h3> 
+						<h6>보드게임으로 단련된 두뇌회전으로 묘수를 잘 찾아냄</h6>
+					</div>
+					<div class="radar__text">
+						<h3>
+							CHA <sup>매력</sup>
+						</h3> 
+						<h6>재치,겸손,웃상 삼박자로 나 싫다는 사람 본적없음</h6>
+					</div>
+					<div class="radar__text">
+						<h3>
+							LUK <sup>운</sup>
+						</h3>
+						<h6>무엇하나 쉽게 이룬게 없지만 '내 팔자 좋은 팔자' 라고 긍정회로 가동</h6>
+					</div>
+					<div class="radar__text">
+						<h3>
+							AGI <sup>민첩</sup>
+						</h3>
+						<h6>빠른 손 보다 빠른 시작으로 승부하는 편</h6>
+					</div>
 				</div>
 			</div>
 			<div class="subWrap" id="pfWrap">
 				<h1 class="secTitle">Portfolio</h1>
 				<div class="secWrap">
 					<div class="secSlide"></div>
+					<span class="slide_cnt"> / 14</span>
 				</div>
 			</div>
 			<div class="subWrap" id="abWrap">
 				<h1 class="secTitle">About Me</h1>
 				<div>
 					<h3>
-						1985년생, 6년차, 장기 7급<br/>
+						1985년생, 7년차, 장기 잘 둠<br/>
 						좋은회사 = ["거리", "분위기", "가능성"];
 					</h3>
 					<h2>재미있게 일 하기</h2>
@@ -90,8 +119,8 @@
 				</div>
 				<div class="tagBox">
 					<span>javascript</span>
-					<span>react</span>
-					<span>angularJS</span>
+					<span>React</span>
+					<span>Vue</span>
 					<span>jquery</span>
 					<span>HTML</span>
 					<span>SCSS</span>
@@ -100,7 +129,7 @@
 				</div>
 				<div class="mailArea">
 					<h2>무교, 무연, 무적, 무드셀라</h2>
-					<h4>E-mail : <a href="mailto:dev.grayt@gmail.com">6력 4무 인재 <i class="fas fa-envelope"></i></a></h4>
+					<h4>E-mail : <a href="mailto:dev.grayt@gmail.com">서포트형 4무 인재 <i class="fas fa-envelope"></i></a></h4>
 				</div>
 			</div>
 		</section>
@@ -108,6 +137,7 @@
 			<div class="footer_btns">
 				<button type="button" id="go_intro" class="lf"><i class="fas fa-arrow-left wClr"></i></button>
 				<button type="button" id="go_top" class="lf"><i class="fas fa-arrow-up wClr"></i></button>
+				<button type="button" id="kakao-link-btn"><img src="./assets/img/kakao_btn_small.png" alt="카카오톡 공유하기"></button>
 				<a href="https://github.com/uitop/ui" target="_blank" class="wClr" title="소스보기"><i class="fab fa-github"></i></a>
 			</div>
 		</footer>

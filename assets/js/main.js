@@ -1,37 +1,28 @@
 $(document).ready(function(){
   $('.go_btn').click(function(e){
     $('.ripple').remove();
-    var jqo = $(this);
-    jqo.addClass('push');
-    var left = e.clientX - (jqo.offset().left + (jqo.width()/2));
-    var top = e.clientY - (jqo.offset().top + (jqo.width()/2));
-    jqo.append('<span class="ripple" style="left:'+left+'px;top:'+top+'px"></span>');
-    // location.reload();
-    setTimeout(function(){
-      jqo.removeClass('push');
-      $('body').addClass('wrap_on');
-      $('.wrap').fadeIn();
-      $('.intro').fadeOut();
-      $('.secSlide').slick('slickNext');
-    },400);
+    $('.intro').addClass('push');
+    var wid = this.offsetWidth/2;
+    var left = e.clientX - this.offsetLeft*1.25;
+    var top = e.clientY - this.offsetTop - wid/2;
+    $(this).append('<span class="ripple" style="left:'+left+'px;top:'+top+'px;height:'+wid+'px"></span>');
+    $('.secSlide').slick('slickGoTo',0);
   });
   $('#go_top').click(function(){
     $('.subArea').animate({scrollTop: '0'}, 500);
   });
   $('#go_intro').click(function(){
-    $('body').removeClass('wrap_on');
-    $('.wrap').fadeOut();
-    $('.intro').fadeIn();
-    $('.bottom_text').html('<span class="cl"></span>');
+    $('.intro').removeClass('push');
+    $('.ripple').remove();
     enter_text(0);
   });
   var ctx = document.getElementById('radar');
   new Chart(ctx, {
     type: 'radar',
     data: {
-      labels: ["체력","지구력","실력","이해력","매력","적응력"],
+      labels: ["STR","DEX","CON","INT","WIS","CHA","LUK","AGI"],
       datasets: [{
-        data:[95,95, 95, 95, 90,100],
+        data:[50,80,100,85,90,80,30,70],
         backgroundColor:'rgba(142, 125, 14, 0.2)',
         borderColor:'#ffeb02',
         borderWidth:1,
@@ -59,7 +50,7 @@ $(document).ready(function(){
       },
       scale: {
         ticks: { 
-          suggestedMin: 30,
+          suggestedMin: 00,
           suggestedMax: 100,
           fontColor:'#000',
           fontSize:10,
@@ -94,7 +85,8 @@ $(document).ready(function(){
     {n:10,a:'assets/img/po10.png',t:'가상화페 거래소 지갑화면',y:2018,i:'이미지 페이지로 이동합니다.'},
     {n:11,a:'http://event.pping.kr',t:'행복쇼핑 이벤트',y:2018,i:'가격비교 사이트 이벤트 리스트'},
     {n:12,a:'http://www.innerinfo.net/',t:'이너인포',y:2019,i:'회사소개 사이트'},
-    {n:13,a:'https://www.kaida.co.kr/',t:'KAIDA',y:2020,i:'수입차 정보제공 사이트'}
+    {n:13,a:'https://www.kaida.co.kr/',t:'KAIDA',y:2020,i:'수입차 정보제공 사이트'},
+    {n:14,a:'http://lms.khcu.ac.kr/',t:'사이버대학LMS',y:2021,i:'학습자 수강,성적,커뮤니티 통합관리 시스템'}
   ];
   links.forEach(function(it){
     $('.secSlide').prepend('<div class="slideItem"><a href="'+it.a+'" target="_blank" title="'+it.t+'"><img src="assets/img/spo'+it.n+'.png"></a><div class="sItemTxt yr'+it.y+'"><h3>'+it.t+'<sub>('+it.y+')</sub></h3><h4>'+it.i+'</h4></div></div>');
@@ -106,6 +98,7 @@ $(document).ready(function(){
     autoplaySpeed: 3800,
     slidesToShow: 3,
     slidesToScroll: 3,
+    arrows:false,
     dots: true,
     responsive:[
         {
@@ -122,19 +115,23 @@ $(document).ready(function(){
                 arrows:false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                dots: false,
             }
         }
     ]});
     
   enter_text(0);
+  APIReady();
 });
-var txt = ['안','녕','하','세','요','.','<br/>','"','pol','"','을',' ','눌','러','주','세','요.','^_^'];
+var timeout,txt = ['안','녕','하','세','요','!','<br/>','"','E','nt','er','"','를',' ','눌','러','주','세','요.','^_^'];
 function enter_text(n){
-  if(txt.length > n && $('.wrap_on').length == 0){
-    $('.cl').before(txt[n]);
-    setTimeout(enter_text,210,n+1);
+  if(n == 0){
+    clearTimeout(timeout);
+    $('.bottom_text').html('<span class="under_cursor"></span>')    
+  }
+  if(txt.length > n){
+    $('.under_cursor').before(txt[n]);
+    timeout = setTimeout(enter_text,210,n+1);
   } else {
-    $('.cl').remove();
+    $('.under_cursor').remove();
   }
 }
