@@ -110,7 +110,7 @@ button {
   opacity: 0;
   position: absolute;
   top: 0;
-  max-height: calc(100% - 28px);
+  max-height: calc(100% - 40px);
   left: 0;
   width: 100%;
   overflow-y: auto;
@@ -324,36 +324,28 @@ button {
 }
 
 .sItemTxt {
-  background: rgba(0, 129, 250, .2);
+  background: rgba(0, 129, 250, .1);
   padding: 0.5rem;
   border-radius: 0 0 15px 0;
 
-  &.yr2015 {
+  &.yr2015,&.yr2016 {
     background: rgba(0, 129, 250, .3);
   }
 
-  &.yr2016 {
+  &.yr2017,&.yr2018 {
     background: rgba(0, 129, 250, .4);
   }
 
-  &.yr2017 {
-    background: rgba(0, 129, 250, .5);
-  }
-
-  &.yr2018 {
+  &.yr2019,&.yr2020 {
     background: rgba(0, 129, 250, .6);
   }
 
-  &.yr2019 {
+  &.yr2021,&.yr2022 {
     background: rgba(0, 129, 250, .7);
   }
 
-  &.yr2020 {
-    background: rgba(0, 129, 250, .8);
-  }
-
-  &.yr2021 {
-    background: rgba(0, 129, 250, 1);
+  &.yr2023 {
+    background: rgba(0, 129, 250, .9);
   }
 
   >h3,
@@ -398,14 +390,13 @@ footer {
   background: rgba(75, 115, 52, .76);
   color: #aaa;
   box-sizing: border-box;
-  padding-right: 5px;
-
+  padding-right: 10px 15px;
   .footer_btns {
     max-width: 1190px;
     margin: 0 auto;
     text-align: right;
     padding: 5px;
-
+    font-size:20px;
     .lf {
       float: left;
       padding: 0;
@@ -429,7 +420,7 @@ footer {
   }
 
   @media screen and (max-width: 620px) {
-    font-size: 25px;
+    font-size: 28px;
 
     #kakao-link-btn {
       width: 25px;

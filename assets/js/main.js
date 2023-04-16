@@ -86,7 +86,11 @@ $(document).ready(function(){
     {n:11,a:'http://event.pping.kr',t:'행복쇼핑 이벤트',y:2018,i:'가격비교 사이트 이벤트 리스트'},
     {n:12,a:'http://www.innerinfo.net/',t:'이너인포',y:2019,i:'회사소개 사이트'},
     {n:13,a:'https://www.kaida.co.kr/',t:'KAIDA',y:2020,i:'수입차 정보제공 사이트'},
-    {n:14,a:'http://lms.khcu.ac.kr/',t:'사이버대학LMS',y:2021,i:'학습자 수강,성적,커뮤니티 통합관리 시스템'}
+    {n:14,a:'http://lms.khcu.ac.kr/',t:'사이버대학LMS',y:2021,i:'학습자 수강,성적,커뮤니티 통합관리 시스템'},
+    {n:15,a:'https://m.yes-us.co.kr',t:'예스어스',y:2021,i:'친환경 못난이 농산물 구독서비스'},
+    {n:16,a:'https://www.hiver.co.kr',t:'하이버',y:2022,i:'남성 타깃 쇼핑앱'},
+    {n:17,a:'https://www.seoulstore.com',t:'서울스토어',y:2022,i:'20대여성 타깃 브랜드 팝업 플랫폼'},
+    {n:18,a:'https://www.selpi.co.kr',t:'셀피',y:2023,i:'의류 도매, 무료사입 앱'}
   ];
   links.forEach(function(it){
     $('.secSlide').prepend('<div class="slideItem"><a href="'+it.a+'" target="_blank" title="'+it.t+'"><img src="assets/img/spo'+it.n+'.png"></a><div class="sItemTxt yr'+it.y+'"><h3>'+it.t+'<sub>('+it.y+')</sub></h3><h4>'+it.i+'</h4></div></div>');

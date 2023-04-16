@@ -6,7 +6,7 @@
 }
 
 @keyframes Glitter {
-  form{
+  from{
     opacity: 0;
   }
   to {
@@ -14,7 +14,7 @@
   }
 }
 @keyframes intro {
-  form{
+  from{
     opacity: 1;
   }
   75%{
@@ -28,7 +28,7 @@
   }
 }
 @keyframes toTransparent {
-  form{
+  from{
     background-color: rgba($color: #fff, $alpha: .7);
   }
   to {
