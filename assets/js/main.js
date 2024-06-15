@@ -92,7 +92,7 @@ $(document).ready(function(){
     {n:17,a:'https://www.seoulstore.com',t:'서울스토어',y:2022,i:'20대여성 타깃 브랜드 팝업 플랫폼'},
     {n:18,a:'https://www.selpi.co.kr',t:'셀피',y:2023,i:'의류 도매, 무료사입 앱'},
     {n:19,a:'https://vyneherb.com',t:'VYNEHERB',y:2023,i:'비대면진료 미국 서비스'},
-    {n:20,a:'https://medi.vyneherb.com/about',t:'셀피',y:2024,i:'한의원 고객관리 서비스'}
+    {n:20,a:'https://medi.vyneherb.com/about',t:'바인허브한의원',y:2024,i:'한의원 고객관리 서비스'}
   ];
   links.forEach(function(it){
     $('.secSlide').prepend('<div class="slideItem"><a href="'+it.a+'" target="_blank" title="'+it.t+'"><img src="assets/img/spo'+it.n+'.png"></a><div class="sItemTxt yr'+it.y+'"><h3>'+it.t+'<sub>('+it.y+')</sub></h3><h4>'+it.i+'</h4></div></div>');
