@@ -15,7 +15,7 @@ function APIReady(){
     objectType: 'feed',
     content: {
         title: '프론트엔드 포트폴리오',
-        description: '도메인이 없어서 플랫폼 사이트 등록을 못했습니다. 아래버튼으로 이동해 부탁드립니다.',
+        description: '도메인이 없어서 플랫폼 사이트 등록을 못했습니다.',
         imageUrl: 'https://uitop.github.io/ui/assets/img/chrome.jpg',
         link: {
             mobileWebUrl: 'https://uitop.github.io/ui/',

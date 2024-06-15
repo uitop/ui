@@ -50,7 +50,7 @@ $(document).ready(function(){
       },
       scale: {
         ticks: { 
-          suggestedMin: 00,
+          suggestedMin: 0,
           suggestedMax: 100,
           fontColor:'#000',
           fontSize:10,
@@ -90,7 +90,9 @@ $(document).ready(function(){
     {n:15,a:'https://m.yes-us.co.kr',t:'예스어스',y:2021,i:'친환경 못난이 농산물 구독서비스'},
     {n:16,a:'https://www.hiver.co.kr',t:'하이버',y:2022,i:'남성 타깃 쇼핑앱'},
     {n:17,a:'https://www.seoulstore.com',t:'서울스토어',y:2022,i:'20대여성 타깃 브랜드 팝업 플랫폼'},
-    {n:18,a:'https://www.selpi.co.kr',t:'셀피',y:2023,i:'의류 도매, 무료사입 앱'}
+    {n:18,a:'https://www.selpi.co.kr',t:'셀피',y:2023,i:'의류 도매, 무료사입 앱'},
+    {n:19,a:'https://vyneherb.com',t:'VYNEHERB',y:2023,i:'비대면진료 미국 서비스'},
+    {n:20,a:'https://medi.vyneherb.com/about',t:'셀피',y:2024,i:'한의원 고객관리 서비스'}
   ];
   links.forEach(function(it){
     $('.secSlide').prepend('<div class="slideItem"><a href="'+it.a+'" target="_blank" title="'+it.t+'"><img src="assets/img/spo'+it.n+'.png"></a><div class="sItemTxt yr'+it.y+'"><h3>'+it.t+'<sub>('+it.y+')</sub></h3><h4>'+it.i+'</h4></div></div>');
